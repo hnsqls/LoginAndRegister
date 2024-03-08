@@ -41,7 +41,18 @@ function checkUserPwd(){
 
 }
 
-//坚持两次密码是否一致
+//登录检查用户名和密码格式是否正确
+function loginCheckForm(){
+    var flag1 = checkUsername()
+    var flag2 = checkUserPwd()
+    
+    if(flag1 && flag2){
+        return true
+    }
+    else return false
+    }
+
+//检查两次密码是否一致
 function checkReUserPwd(){
 
 //首先还是先检查格式
